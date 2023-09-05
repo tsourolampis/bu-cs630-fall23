@@ -67,4 +67,4 @@ Time complexity: $O(n^2)$
 	- ranking\[b, a\] vs ranking\[b, M(b)]
 
 ### There is always a stable matching...
-- If the graph is bipartite (stable roommate problem)
+- If the graph is bipartite (if not, then stable roommate problem)
