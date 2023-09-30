@@ -4,3 +4,5 @@ def best_position(points, weights):
   weights: List of floats.
 
   Return: a tuple (x,y) that represents the location of the point that minimizes the weighted distance sum.
+  '''
+  
