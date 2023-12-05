@@ -1,0 +1,61 @@
+import math
+
+input_dict_morse = {'e': 12000,
+                    't': 9000,
+                    'a': 8000,
+                    'i': 8000,
+                    'n': 8000,
+                    'o': 8000,
+                    's': 8000,
+                    'h': 6400,
+                    'r': 6200,
+                    'd': 4400,
+                    'l': 4000,
+                    'u': 3400,
+                    'c': 3000,
+                    'm': 3000,
+                    'f': 2500,
+                    'w': 2000,
+                    'y': 2000,
+                    'g': 1700,
+                    'p': 1700,
+                    'b': 1600,
+                    'v': 1200,
+                    'k': 800,
+                    'q': 500,
+                    'j': 400,
+                    'x': 400,
+                    'z': 200
+                    }
+
+input_dict_uniform = {'a': 1,
+                      'b': 1,
+                      'c': 1,
+                      'd': 1,
+                      'e': 1,
+                      'f': 1,
+                      'g': 1,
+                      'h': 1,
+                      'i': 1,
+                      'j': 1,
+                      'k': 1,
+                      'l': 1,
+                      'm': 1,
+                      'n': 1,
+                      'o': 1,
+                      'p': 1,
+                      'q': 1,
+                      'r': 1,
+                      's': 1,
+                      't': 1,
+                      'u': 1,
+                      'v': 1,
+                      'w': 1,
+                      'x': 1,
+                      'y': 1,
+                      'z': 1
+                      }
+
+total_entropy = lambda dict_input: sum(list(map(lambda p: -p*math.log(p, 2), list(map(lambda x: x/sum(dict_input.values()), dict_input.values())))))
+
+print(total_entropy(input_dict_morse), total_entropy(input_dict_uniform))
